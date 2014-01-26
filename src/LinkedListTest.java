@@ -17,10 +17,19 @@ public class LinkedListTest {
         linkedList.add("Third");
         assertFalse(linkedList.isEmpty());
 
-        linkedList.removeFirst();
+        linkedList.displayAll();
+
+        assertTrue(linkedList.contains("Second"));
+
+        linkedList.remove("Second");
+        assertFalse(linkedList.isEmpty());
+        linkedList.displayAll();
+
+        assertFalse(linkedList.contains("Second"));
         linkedList.removeFirst();
         linkedList.removeFirst();
 
         assertTrue(linkedList.isEmpty());
+
     }
 }
